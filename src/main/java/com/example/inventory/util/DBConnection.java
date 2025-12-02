@@ -6,9 +6,8 @@ import java.sql.SQLException;
 
 public class DBConnection {
     private static final String URL = "jdbc:postgresql://localhost:5432/inventory_db";
-    private static final String USER = "postgres";
-    private static final String PASS = "your postgre password";
-
+    private static final String USER = System.getenv("DB_USER");
+    private static final String PASS = System.getenv("DB_PASS");
     static {
         try {
             Class.forName("org.postgresql.Driver");

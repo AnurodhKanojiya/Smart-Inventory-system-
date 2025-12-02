@@ -13,7 +13,8 @@ public class Product {
     public Product() {}
 
     // useful constructor
-    public Product(String sku, String name, String category, double purchasePrice, double sellingPrice, int quantity, int reorderLevel) {
+    public Product(String sku, String name, String category, double purchasePrice, double sellingPrice, int quantity, int reorderLevel)
+    {
         this.sku = sku;
         this.name = name;
         this.category = category;

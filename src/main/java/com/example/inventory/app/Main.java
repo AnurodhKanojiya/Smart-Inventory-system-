@@ -36,11 +36,13 @@ public class Main {
         // 3 List All Products
 
         System.out.println("\n--- Product List ---");
-        for (Product product : dao.listAll()) {
+        for (Product product : dao.listAll())
+        {
             System.out.println(product.getProductId() + " | " +
                     product.getSku() + " | " +
                     product.getName() + " | Qty: " +
                     product.getQuantity());
+
         }
 
 

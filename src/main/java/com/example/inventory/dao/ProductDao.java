@@ -71,7 +71,8 @@ public class ProductDao {
     }
 
     // update quantity (own connection)
-    public boolean updateQuantity(int productId, int newQty) {
+    public boolean updateQuantity(int productId, int newQty)
+    {
         String sql = "UPDATE products SET quantity = ? WHERE product_id = ?";
         try (Connection c = DBConnection.getConnection();
              PreparedStatement ps = c.prepareStatement(sql)) {
@@ -84,7 +85,8 @@ public class ProductDao {
         return false;
     }
     // transaction-friendly update quantity
-    public boolean updateQuantity(Connection conn, int productId, int newQty) throws SQLException {
+    public boolean updateQuantity(Connection conn, int productId, int newQty) throws SQLException
+    {
         String sql = "UPDATE products SET quantity = ? WHERE product_id = ?";
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setInt(1, newQty);
