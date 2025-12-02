@@ -83,7 +83,6 @@ public class ProductDao {
         }
         return false;
     }
-
     // transaction-friendly update quantity
     public boolean updateQuantity(Connection conn, int productId, int newQty) throws SQLException {
         String sql = "UPDATE products SET quantity = ? WHERE product_id = ?";
