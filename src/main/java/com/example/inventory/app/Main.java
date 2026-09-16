@@ -9,7 +9,7 @@ public class Main {
         ProductDao dao = new ProductDao();
 
 
-        // 1 Create New Product
+        // 1 Create New Product - feature1
 
         Product p = new Product();
         p.setSku("SKU1001");
